@@ -27,8 +27,9 @@ header h1 {
 }
 
 header input {
-  padding: 5px;
+  padding: 6px;
   font-size: 16px;
+  min-width: 320px;
 }
 
 main {
