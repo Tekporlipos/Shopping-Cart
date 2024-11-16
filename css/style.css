@@ -18,6 +18,7 @@ header {
   color: #fff;
   padding: 10px 20px;
   display: flex;
+  position: sticky;
   justify-content: space-between;
   align-items: center;
 }
@@ -27,8 +28,9 @@ header h1 {
 }
 
 header input {
-  padding: 5px;
+  padding: 6px;
   font-size: 16px;
+  min-width: 320px;
 }
 
 main {
@@ -48,21 +50,41 @@ main {
 .product-card {
   border: 1px solid #ddd;
   padding: 10px;
-  text-align: center;
+  height: 390px;
+  background-color: #efeeee;
   border-radius: 8px;
-  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .product-card img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
+  max-height: 210px;
   border-radius: 8px;
+}
+
+.product-card .price {
+font-weight: bold;
+}
+.product-card .description {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 3;
+  text-overflow: ellipsis;
+}
+.product-card .card-info {
+  display: flex;
+  justify-content: space-between;
 }
 
 .product-card button {
   margin-top: 10px;
-  padding: 10px;
+  padding: 16px;
   border: none;
+  width: 100%;
   background: #0077cc;
   color: white;
   border-radius: 5px;
