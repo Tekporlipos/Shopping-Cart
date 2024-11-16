@@ -1,5 +1,17 @@
 // Product Data
 const products = [
+  { id: 1, name: "Apple", price: 1.2, description: "As a member of our programming team, you’ll be responsible for building a variety of applications. One of our current projects involves developing a shopping list application with both front-end and back-end components.  Please proceed with one of the two assignments outlined below as your work assignment. \n" +
+      "\n" +
+      "\n", image: "https://via.placeholder.com/150" },
+  { id: 2, name: "Banana", price: 0.5, description: "Sweet yellow banana", image: "https://via.placeholder.com/150" },
+  { id: 3, name: "Orange", price: 0.8, description: "Juicy orange", image: "https://via.placeholder.com/150" },
+  { id: 4, name: "Grapes", price: 2.5, description: "Seedless grapes", image: "https://via.placeholder.com/150" },
+
+  { id: 1, name: "Apple", price: 1.2, description: "Fresh red apple", image: "https://via.placeholder.com/150" },
+  { id: 2, name: "Banana", price: 0.5, description: "Sweet yellow banana", image: "https://via.placeholder.com/150" },
+  { id: 3, name: "Orange", price: 0.8, description: "Juicy orange", image: "https://via.placeholder.com/150" },
+  { id: 4, name: "Grapes", price: 2.5, description: "Seedless grapes", image: "https://via.placeholder.com/150" },
+
   { id: 1, name: "Apple", price: 1.2, description: "Fresh red apple", image: "https://via.placeholder.com/150" },
   { id: 2, name: "Banana", price: 0.5, description: "Sweet yellow banana", image: "https://via.placeholder.com/150" },
   { id: 3, name: "Orange", price: 0.8, description: "Juicy orange", image: "https://via.placeholder.com/150" },
@@ -25,11 +37,15 @@ function renderProducts(filter = "") {
     const productCard = document.createElement("div");
     productCard.className = "product-card";
     productCard.innerHTML = `
+    <div>
       <img src="${product.image}" alt="${product.name}">
-      <h3>${product.name}</h3>
-      <p>${product.description}</p>
-      <p>$${product.price.toFixed(2)}</p>
-      <button onclick="addToCart(${product.id})">Add to Cart</button>
+      <div class="card-info">
+       <h3>${product.name}</h3>
+      <p class="price">$${product.price.toFixed(2)}</p>
+      </div>
+      <p class="description">${product.description}</p>
+    </div>
+    <button onclick="addToCart(${product.id})">Add to Cart</button>
     `;
     productList.appendChild(productCard);
   });
